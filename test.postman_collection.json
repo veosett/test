@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "4b88a554-dbc3-49e2-b9a4-9b80d28f3510",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add quote",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOjEsImlhdCI6MTYwMjAwNzM1NSwiZXhwIjoxNjAyMDA3OTU1fQ.VIoc7T_9gF1mvADY1py1uNVImfeKakVAqTl0biIkXgM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isin\": \"RU000A0JX0J1\",\r\n    \"bid\": 10.2,\r\n    \"ask\": 101.9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/quote/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quote",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all quote",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOjEsImlhdCI6MTYwMjAwNzM1NSwiZXhwIjoxNjAyMDA3OTU1fQ.VIoc7T_9gF1mvADY1py1uNVImfeKakVAqTl0biIkXgM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/quote/getAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quote",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save all quote",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOjEsImlhdCI6MTYwMjAwNzM1NSwiZXhwIjoxNjAyMDA3OTU1fQ.VIoc7T_9gF1mvADY1py1uNVImfeKakVAqTl0biIkXgM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n\"isin\": \"RU100A0JX0J2\",\r\n \"bid\": 100.3,\r\n \"ask\": 102.0\r\n},{\r\n\"isin\": \"RU101A0JX0J2\",\r\n \"bid\": 100.39999999999999,\r\n \"ask\": 102.1\r\n},{\r\n\"isin\": \"RU102A0JX0J2\",\r\n \"bid\": 100.49999999999999,\r\n \"ask\": 102.19999999999999\r\n},{\r\n\"isin\": \"RU103A0JX0J2\",\r\n \"bid\": 100.59999999999998,\r\n \"ask\": 102.29999999999998\r\n},{\r\n\"isin\": \"RU104A0JX0J2\",\r\n \"bid\": 100.69999999999997,\r\n \"ask\": 102.39999999999998\r\n},{\r\n\"isin\": \"RU105A0JX0J2\",\r\n \"bid\": 100.79999999999997,\r\n \"ask\": 102.49999999999997\r\n},{\r\n\"isin\": \"RU106A0JX0J2\",\r\n \"bid\": 100.89999999999996,\r\n \"ask\": 102.59999999999997\r\n},{\r\n\"isin\": \"RU107A0JX0J2\",\r\n \"bid\": 100.99999999999996,\r\n \"ask\": 102.69999999999996\r\n},{\r\n\"isin\": \"RU108A0JX0J2\",\r\n \"bid\": 101.09999999999995,\r\n \"ask\": 102.79999999999995\r\n},{\r\n\"isin\": \"RU109A0JX0J2\",\r\n \"bid\": 101.19999999999995,\r\n \"ask\": 102.89999999999995\r\n},{\r\n\"isin\": \"RU110A0JX0J2\",\r\n \"bid\": 101.29999999999994,\r\n \"ask\": 102.99999999999994\r\n},{\r\n\"isin\": \"RU111A0JX0J2\",\r\n \"bid\": 101.39999999999993,\r\n \"ask\": 103.09999999999994\r\n},{\r\n\"isin\": \"RU112A0JX0J2\",\r\n \"bid\": 101.49999999999993,\r\n \"ask\": 103.19999999999993\r\n},{\r\n\"isin\": \"RU113A0JX0J2\",\r\n \"bid\": 101.59999999999992,\r\n \"ask\": 103.29999999999993\r\n},{\r\n\"isin\": \"RU114A0JX0J2\",\r\n \"bid\": 101.69999999999992,\r\n \"ask\": 103.39999999999992\r\n},{\r\n\"isin\": \"RU115A0JX0J2\",\r\n \"bid\": 101.79999999999991,\r\n \"ask\": 103.49999999999991\r\n},{\r\n\"isin\": \"RU116A0JX0J2\",\r\n \"bid\": 101.8999999999999,\r\n \"ask\": 103.59999999999991\r\n},{\r\n\"isin\": \"RU117A0JX0J2\",\r\n \"bid\": 101.9999999999999,\r\n \"ask\": 103.6999999999999\r\n},{\r\n\"isin\": \"RU118A0JX0J2\",\r\n \"bid\": 102.0999999999999,\r\n \"ask\": 103.7999999999999\r\n},{\r\n\"isin\": \"RU119A0JX0J2\",\r\n \"bid\": 102.19999999999989,\r\n \"ask\": 103.89999999999989\r\n},{\r\n\"isin\": \"RU120A0JX0J2\",\r\n \"bid\": 102.29999999999988,\r\n \"ask\": 103.99999999999989\r\n},{\r\n\"isin\": \"RU121A0JX0J2\",\r\n \"bid\": 102.39999999999988,\r\n \"ask\": 104.09999999999988\r\n},{\r\n\"isin\": \"RU122A0JX0J2\",\r\n \"bid\": 102.49999999999987,\r\n \"ask\": 104.19999999999987\r\n},{\r\n\"isin\": \"RU123A0JX0J2\",\r\n \"bid\": 102.59999999999987,\r\n \"ask\": 104.29999999999987\r\n},{\r\n\"isin\": \"RU124A0JX0J2\",\r\n \"bid\": 102.69999999999986,\r\n \"ask\": 104.39999999999986\r\n},{\r\n\"isin\": \"RU125A0JX0J2\",\r\n \"bid\": 102.79999999999986,\r\n \"ask\": 104.49999999999986\r\n},{\r\n\"isin\": \"RU126A0JX0J2\",\r\n \"bid\": 102.89999999999985,\r\n \"ask\": 104.59999999999985\r\n},{\r\n\"isin\": \"RU127A0JX0J2\",\r\n \"bid\": 102.99999999999984,\r\n \"ask\": 104.69999999999985\r\n},{\r\n\"isin\": \"RU128A0JX0J2\",\r\n \"bid\": 103.09999999999984,\r\n \"ask\": 104.79999999999984\r\n},{\r\n\"isin\": \"RU129A0JX0J2\",\r\n \"bid\": 103.19999999999983,\r\n \"ask\": 104.89999999999984\r\n},{\r\n\"isin\": \"RU130A0JX0J2\",\r\n \"bid\": 103.29999999999983,\r\n \"ask\": 104.99999999999983\r\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/quote/saveAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quote",
+						"saveAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get quote",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOjEsImlhdCI6MTYwMjAwNzM1NSwiZXhwIjoxNjAyMDA3OTU1fQ.VIoc7T_9gF1mvADY1py1uNVImfeKakVAqTl0biIkXgM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isin\": \"RU000A0JX0J1\",\r\n    \"bid\": 100.2,\r\n    \"ask\": 101.9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/quote/get/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quote",
+						"get",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all energy level",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOjEsImlhdCI6MTYwMjAwNzM1NSwiZXhwIjoxNjAyMDA3OTU1fQ.VIoc7T_9gF1mvADY1py1uNVImfeKakVAqTl0biIkXgM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isin\": \"RU000A0JX0J1\",\r\n    \"bid\": 100.2,\r\n    \"ask\": 101.9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/energyLevel/getAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"energyLevel",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get elvl by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOjEsImlhdCI6MTYwMjAwNzM1NSwiZXhwIjoxNjAyMDA3OTU1fQ.VIoc7T_9gF1mvADY1py1uNVImfeKakVAqTl0biIkXgM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isin\": \"RU000A0JX0J1\",\r\n    \"bid\": 100.2,\r\n    \"ask\": 101.9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/energyLevel/get/RU100A0JX0J2/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"energyLevel",
+						"get",
+						"RU100A0JX0J2",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
